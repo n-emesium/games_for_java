@@ -25,7 +25,7 @@ public class xox {
                     }
                     System.out.println();
                 }
-                System.out.println("Understood, now choose where to put your element in the grid. Specify the row. ");
+                System.out.println("Choose where to put your element in the grid. Specify the row. ");
                 int row = sc.nextInt();
                 sc.nextLine();
                 System.out.println("Now choose the column. ");
@@ -79,7 +79,7 @@ public class xox {
                     }
                     System.out.println();
                 }
-                System.out.println("Understood, now choose where to put your element in the grid. Specify the row. ");
+                System.out.println("Choose where to put your element in the grid. Specify the row. ");
                 int row = sc.nextInt();
                 sc.nextLine();
                 System.out.println("Now choose the column. ");
