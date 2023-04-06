@@ -31,6 +31,10 @@ public class xox {
                 System.out.println("Now choose the column. ");
                 int col = sc.nextInt();
                 sc.nextLine();
+                if (grid[row-1][col-1] != '\u0000') { // check if the grid value is not empty
+                    System.out.println("That block is already occupied. Please choose a different block.");
+                    continue; // prompt the user to enter a new row and column
+                }
                 grid[row-1][col-1] = player_input;
                 int[] bot_in = bot_randomize(grid);
                 grid[bot_in[0]][bot_in[1]] = bot_input;
@@ -85,6 +89,10 @@ public class xox {
                 System.out.println("Now choose the column. ");
                 int col = sc.nextInt();
                 sc.nextLine();
+                if (grid[row-1][col-1] != '\u0000') { // check if the grid value is not empty
+                    System.out.println("That block is already occupied. Please choose a different block.");
+                    continue; // prompt the user to enter a new row and column
+                }
                 grid[row-1][col-1] = 'x';
                 if (check(grid) == 1) {
                     wins++;
