@@ -157,7 +157,7 @@ public class xox {
         }
         //check for columns
         for (int j = 0; j < arr[j].length; j++) {
-            if (arr[0][j] != ' ' && arr[0][j] == arr[0][j + 1] && arr[0][j] == arr[0][j + 2]) {
+            if (arr[0][j] != ' ' && arr[0][j] == arr[1][j] && arr[0][j] == arr[2][j]) {
                 if (arr[0][j] == 'x') {
                     return 1;
                 } else {
