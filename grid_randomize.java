@@ -32,19 +32,19 @@ public class grid_randomize {
         System.out.println();
         System.out.println("You have 10 seconds to enter the row and column of the odd character, start! Row first!");
         long startTime = System.currentTimeMillis();
-int m = -1, n = -1;
-while ((System.currentTimeMillis() - startTime) < 10000 && (m == -1 || n == -1)) {
-    if (sc.hasNextInt()) {
-        if (m == -1) {
-            m = sc.nextInt();
-            System.out.println("Alright! Now column! ");
-        } else {
-            n = sc.nextInt();
+        int m = -1, n = -1;
+        while ((System.currentTimeMillis() - startTime) < 10000 && (m == -1 || n == -1)) {
+            if (sc.hasNextInt()) {
+                if (m == -1) {
+                    m = sc.nextInt();
+                    System.out.println("Alright! Now column! ");
+                } else {
+                    n = sc.nextInt();
+                }
+            } else {
+                sc.nextLine();
+            }
         }
-    } else {
-        sc.nextLine(); // move inside the else block
-    }
-}
         if (grid[m][n].equals(odd_c)) {
             System.out.println("Congrats! You have won! ");
         } else {
@@ -52,11 +52,12 @@ while ((System.currentTimeMillis() - startTime) < 10000 && (m == -1 || n == -1))
         }
 
         System.out.println();
+        sc.nextLine();
         System.out.println("Want to receive coordinates for where the odd characters was? ");
         String cont = sc.nextLine();
         if (cont.toLowerCase().equals("yes")) {
             for (int i : coordinates(grid,odd_c)) {
-                System.out.print(i + " ");
+                System.out.print(i + ", ");
             }
         }
     }
